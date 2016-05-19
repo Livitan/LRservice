@@ -81,40 +81,52 @@ body {
   color: #4a4a4a;
   font-size: 30px;
   font-weight: 700;
-  line-height: 24px;
+  line-height: 39px;
   text-align: center;
-  margin: 0 auto 70px;
+  margin: 0 auto 40px;
   text-transform: uppercase; }
+  .title-section:first-letter {
+    border-top: 5px double #1dff80;
+    border-left: 5px double #1dff80;
+    border-bottom: 5px double #1dff80;
+    padding-left: 5px; }
 
-.top-menu .icon-LRservice {
-  margin-top: 10px;
-  margin-right: 5px; }
-
-.top-menu .icon-bar {
-  background-color: #000; }
-
-.top-menu-title {
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: #000;
-  padding: 10px 0 0 0; }
-
-.top-menu .phone {
-  font-family: 'Segoe UI';
-  color: #363636;
-  font-size: 24px;
-  line-height: 24px;
-  margin-bottom: 5px;
-  text-align: center;
-  width: 160px; }
+.top-menu,
+.bottom-menu {
+  padding-top: 15px; }
+  .top-menu .navbar,
+  .bottom-menu .navbar {
+    margin-bottom: 5px; }
+  .top-menu .icon-LRservice,
+  .bottom-menu .icon-LRservice {
+    margin-top: 10px;
+    margin-right: 5px; }
+  .top-menu .icon-bar,
+  .bottom-menu .icon-bar {
+    background-color: #000; }
+  .top-menu-title,
+  .bottom-menu-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #000;
+    padding: 10px 0 0 0; }
+  .top-menu .phone,
+  .bottom-menu .phone {
+    font-family: 'Segoe UI';
+    color: #363636;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 160px; }
 
 .promo {
   background-image: url(../img/promo-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center right;
+  background-position: 70% 50%;
   height: 867px;
   color: #fff;
   text-align: center;
@@ -272,7 +284,8 @@ body {
     .promo .form-group .usr-phone {
       -webkit-border-radius: 0;
               border-radius: 0;
-      padding: 22px 30px;
+      padding-left: 50px;
+      height: 44px;
       border: none;
       background-repeat: no-repeat;
       background-position: 4% center; }
@@ -330,7 +343,6 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#28442b', endColorstr='#3f4c6b',GradientType=0 );
   /* IE6-9 */
   padding-top: 40px;
-  padding-bottom: 70px;
   width: 100%;
   position: relative; }
   .some-work:after {
@@ -355,7 +367,7 @@ body {
     color: #fff;
     font-size: 30px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 39px;
     text-align: center; }
   .some-work .img-responsive {
     min-width: 99.6%; }
@@ -536,12 +548,13 @@ body {
       background-color: #16bf60; }
 
 .foo {
-  margin-top: 80px; }
+  margin-top: 80px;
+  padding-bottom: 20px; }
   .foo-top {
     background-image: url(../img/foo-bg.jpg);
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center center;
+    background-position: 90% 100%;
     padding-top: 8vw;
     height: 31vw; }
   .foo .post-diagnosis {
@@ -608,7 +621,8 @@ body {
     .foo .form-group .usr-phone {
       -webkit-border-radius: 0;
               border-radius: 0;
-      padding: 22px 30px;
+      padding-left: 50px;
+      height: 44px;
       border: none;
       background-repeat: no-repeat;
       background-position: 4% center; }
@@ -629,16 +643,17 @@ body {
     margin: 0 auto; }
 
 @media (min-width: 320px) and (max-width: 991px) {
-  .top-menu .navbar-text {
+  .top-menu .navbar-text,
+  .bottom-menu .navbar-text {
     float: none; }
-  .top-menu .col-sm-offset-10 {
-    margin-left: 15%; }
-    .top-menu .col-sm-offset-10 .phone {
-      width: 90%;
-      margin-bottom: 10px; }
-    .top-menu .col-sm-offset-10 .btn.outline {
-      width: 90%;
-      margin: 0 auto; }
+  .top-menu .col-sm-offset-10 .phone,
+  .bottom-menu .col-sm-offset-10 .phone {
+    width: 90%;
+    margin-bottom: 10px; }
+  .top-menu .col-sm-offset-10 .btn.outline,
+  .bottom-menu .col-sm-offset-10 .btn.outline {
+    width: 90%;
+    margin: 0 auto; }
   .promo .form-group .usr-button {
     width: 100%;
     margin-top: 10px; }
@@ -654,17 +669,23 @@ body {
     height: 40vw;
     background-size: cover; }
     .foo-top .post-diagnosis {
-      height: 240px; }
+      height: 270px; }
   .foo .form-group .usr-name,
   .foo .form-group .usr-phone {
     width: 100%;
     padding-left: 50px; }
   .foo .form-group .usr-button {
-    width: 100%; } }
+    width: 100%;
+    margin-top: 10px; } }
 
 @media (min-width: 769px) and (max-width: 991px) {
   .promo {
-    padding-top: 50px; } }
+    padding-top: 50px; }
+  .navbar-brand {
+    margin-top: 30%; }
+  .top-menu .col-sm-offset-10,
+  .bottom-menu .col-sm-offset-10 {
+    margin-left: 21%; } }
 
 @media (min-width: 320px) and (max-width: 768px) {
   .promo {
@@ -694,7 +715,30 @@ body {
   .table-red {
     display: none; }
   .reasons-turn .road-bg {
-    padding-top: 320px; } }
+    padding-top: 320px; }
+  .top-menu .navbar-header,
+  .bottom-menu .navbar-header {
+    width: 100%; }
+    .top-menu .navbar-header .navbar-brand,
+    .bottom-menu .navbar-header .navbar-brand {
+      -webkit-transform: translateX(-35%);
+          -ms-transform: translateX(-35%);
+              transform: translateX(-35%);
+      margin-left: 50%; }
+  .top-menu .top-menu-title,
+  .bottom-menu .top-menu-title {
+    text-align: center; }
+  .top-menu .outline,
+  .bottom-menu .outline {
+    display: block;
+    margin-top: 10px; }
+  .top-menu .phone,
+  .bottom-menu .phone {
+    margin: 0 auto; }
+  .foo-top {
+    height: 370px; }
+  .foo .form-group {
+    padding: 0; } }
 
 @media (min-width: 992px) {
   .comments .client-name {
