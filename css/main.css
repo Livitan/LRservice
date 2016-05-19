@@ -93,44 +93,62 @@ body {
 
 .top-menu,
 .bottom-menu {
-  padding-top: 15px; }
+  padding-top: 5px; }
+  .top-menu .navbar-brand,
+  .bottom-menu .navbar-brand {
+    padding: 9px 15px; }
   .top-menu .navbar,
   .bottom-menu .navbar {
     margin-bottom: 5px; }
-  .top-menu .icon-LRservice,
-  .bottom-menu .icon-LRservice {
-    margin-top: 10px;
-    margin-right: 5px; }
+  .top-menu .menu,
+  .bottom-menu .menu {
+    display: table; }
+    .top-menu .menu .navbar-brand,
+    .bottom-menu .menu .navbar-brand {
+      display: table-cell;
+      vertical-align: middle; }
+    .top-menu .menu .title-wrap,
+    .bottom-menu .menu .title-wrap {
+      display: table-cell;
+      vertical-align: middle; }
+      .top-menu .menu .title-wrap .top-menu-title,
+      .bottom-menu .menu .title-wrap .top-menu-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #000;
+        margin-top: 10px;
+        -webkit-transform: translateX(1%);
+            -ms-transform: translateX(1%);
+                transform: translateX(1%); }
+    .top-menu .menu .nav-phone,
+    .bottom-menu .menu .nav-phone {
+      display: table-cell;
+      vertical-align: middle; }
   .top-menu .icon-bar,
   .bottom-menu .icon-bar {
     background-color: #000; }
-  .top-menu-title,
-  .bottom-menu-title {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 24px;
-    text-transform: uppercase;
-    color: #000;
-    padding: 10px 0 0 0; }
   .top-menu .phone,
   .bottom-menu .phone {
     font-family: 'Segoe UI';
     color: #363636;
     font-size: 24px;
     line-height: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     text-align: center;
     width: 160px; }
 
 .promo {
-  background-image: url(../img/promo-bg.jpg);
+  background-image: url(../img/promo-bg-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 70% 50%;
-  height: 867px;
+  background-position: center;
+  height: 670px;
   color: #fff;
   text-align: center;
-  padding-top: 110px; }
+  padding-top: 50px; }
   .promo-border {
     border-bottom: 13px solid #1dff80;
     border-right: 10px solid #1dff80;
@@ -219,7 +237,8 @@ body {
       box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
       background: #885d01; }
   .promo .btn-group {
-    margin-top: 115px; }
+    margin-top: 115px;
+    margin-bottom: 20px; }
   .promo .post-diagnosis {
     background-color: rgba(0, 0, 0, 0.35);
     width: 90%;
@@ -303,7 +322,8 @@ body {
         color: transparent; }
 
 .features {
-  text-align: center; }
+  text-align: center;
+  padding-bottom: 10px; }
   .features-two .title-section {
     margin-top: 30px; }
   .features .img-responsive {
@@ -469,13 +489,17 @@ body {
       line-height: 24px;
       text-align: left;
       padding-right: 10px; }
+  .reasons-turn .road {
+    padding-top: 100px; }
+    .reasons-turn .road-btn {
+      margin-left: -60px; }
   .reasons-turn .road-bg {
     background-image: url(../img/road-bg.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 100%;
     padding-top: 600px;
-    margin-top: 90px; }
+    margin-top: -70px; }
   .reasons-turn .b-application {
     background-color: #1ca0e5;
     -webkit-border-radius: 0;
@@ -643,17 +667,36 @@ body {
     margin: 0 auto; }
 
 @media (min-width: 320px) and (max-width: 991px) {
-  .top-menu .navbar-text,
-  .bottom-menu .navbar-text {
-    float: none; }
-  .top-menu .col-sm-offset-10 .phone,
-  .bottom-menu .col-sm-offset-10 .phone {
-    width: 90%;
-    margin-bottom: 10px; }
-  .top-menu .col-sm-offset-10 .btn.outline,
-  .bottom-menu .col-sm-offset-10 .btn.outline {
-    width: 90%;
-    margin: 0 auto; }
+  .top-menu .menu,
+  .bottom-menu .menu {
+    display: block; }
+    .top-menu .menu .navbar-brand img,
+    .bottom-menu .menu .navbar-brand img {
+      margin: 0 auto; }
+    .top-menu .menu .title-wrap,
+    .bottom-menu .menu .title-wrap {
+      margin-top: 70px; }
+    .top-menu .menu .nav-phone,
+    .bottom-menu .menu .nav-phone {
+      -webkit-transform: translateX(-2%);
+          -ms-transform: translateX(-2%);
+              transform: translateX(-2%); }
+      .top-menu .menu .nav-phone .phone,
+      .top-menu .menu .nav-phone .outline,
+      .bottom-menu .menu .nav-phone .phone,
+      .bottom-menu .menu .nav-phone .outline {
+        width: 100%; }
+      .top-menu .menu .nav-phone .phone,
+      .bottom-menu .menu .nav-phone .phone {
+        margin: 10px auto; }
+    .top-menu .menu .navbar-brand,
+    .top-menu .menu .title-wrap,
+    .top-menu .menu .nav-phone,
+    .bottom-menu .menu .navbar-brand,
+    .bottom-menu .menu .title-wrap,
+    .bottom-menu .menu .nav-phone {
+      width: 100%;
+      display: block; }
   .promo .form-group .usr-button {
     width: 100%;
     margin-top: 10px; }
@@ -680,12 +723,7 @@ body {
 
 @media (min-width: 769px) and (max-width: 991px) {
   .promo {
-    padding-top: 50px; }
-  .navbar-brand {
-    margin-top: 30%; }
-  .top-menu .col-sm-offset-10,
-  .bottom-menu .col-sm-offset-10 {
-    margin-left: 21%; } }
+    padding-top: 20px; } }
 
 @media (min-width: 320px) and (max-width: 768px) {
   .promo {
@@ -744,3 +782,14 @@ body {
   .comments .client-name {
     padding-top: 22%;
     margin-left: 25px; } }
+
+@media (max-width: 1199px) {
+  .reasons-turn .road-bg {
+    background-image: url(../img/road-bg-m.png);
+    margin-top: -5px; }
+  .reasons-turn .road {
+    padding-top: 20px; }
+  .reasons-turn .road-btn {
+    margin: 0 0 10px 0; }
+  .promo {
+    height: 821px; } }
